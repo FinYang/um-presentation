@@ -2,23 +2,21 @@
 
 ## Installing
 
-*TODO*: Replace the `<github-organization>` with your GitHub organization.
 
 ```bash
-quarto use template <github-organization>/um-presentation
+quarto use template FinYang/um-presentation
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your article.
 
-## Using
+## Format options
 
-*TODO*: Describe how to use your format.
+- `titlefontsize: 20pt`
 
-## Format Options
 
-*TODO*: If your format has options that can be set via document metadata, describe them.
+## Note
 
-## Example
-
-Here is the source code for a minimal sample document: [example.qmd](example.qmd).
-
+- Modified from `quarto-monash/presentation`. 
+- No toc support. 
+- Removed a few figure placement methods
+- No logo yet

@@ -4,7 +4,23 @@ version: 1.0.0
 quarto-required: ">=1.7.0"
 contributes:
   formats:
-    pdf:
-      toc: true
-      include-in-header: header.tex
+    beamer:
+      toc: false
+      aspectratio: 43
+      fontsize: 14pt
+      section-titles: false
+      pdf-engine: pdflatex
+      fig-width: 9
+      fig-height: 4.5
+      date-format: "D MMMM YYYY"
+      slide-number: true
+      show-slide-number: all
+      titlecolor: white
+      titlegraphic: bg.jpg
+      titlelogo: logo-72dpi.jpg
+      template-partials:
+        - before-title.tex
+        # - toc.tex
+      format-resources:
+        - beamerthemeUM.sty
 
