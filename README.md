@@ -1,5 +1,10 @@
 # Quarto beamer template with Maastricht University colour scheme
 
+- This is an unofficial template that is not endorsed by the university or the school. 
+- The title page background photos were taken by the author and is not endorsed by the university or the school.
+- Modified from [`quarto-monash/presentation`](https://github.com/quarto-monash/presentation). 
+
+
 ## Installing
 
 
@@ -16,7 +21,8 @@ This will install the extension and create an example qmd file that you can use 
 
 ## Note
 
-- Modified from [`quarto-monash/presentation`](https://github.com/quarto-monash/presentation). 
+
+
 - No toc support. 
 - Removed a few figure placement methods
 - No logo yet
