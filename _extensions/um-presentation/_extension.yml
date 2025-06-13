@@ -10,8 +10,8 @@ contributes:
       fontsize: 14pt
       section-titles: false
       pdf-engine: pdflatex
-      fig-width: 9
-      fig-height: 4.5
+      # fig-width: 9
+      # fig-height: 4.5
       date-format: "D MMMM YYYY"
       slide-number: true
       show-slide-number: all
