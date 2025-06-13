@@ -1,6 +1,6 @@
 ---
 title: Untitled
-author: Yangzhuoran Fin Yang
+author: Firstname Lastname
 date: last-modified
 format:
   um-presentation-beamer: default

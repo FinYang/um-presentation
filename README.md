@@ -1,4 +1,4 @@
-# Um-presentation Format
+# Quarto beamer template with Maastricht University colour scheme
 
 ## Installing
 
@@ -16,7 +16,7 @@ This will install the extension and create an example qmd file that you can use 
 
 ## Note
 
-- Modified from `quarto-monash/presentation`. 
+- Modified from [`quarto-monash/presentation`](https://github.com/quarto-monash/presentation). 
 - No toc support. 
 - Removed a few figure placement methods
 - No logo yet

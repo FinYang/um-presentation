@@ -17,10 +17,9 @@ contributes:
       show-slide-number: all
       titlecolor: white
       titlegraphic: bg.jpg
-      titlelogo: logo-72dpi.jpg
+      # titlelogo: logo-72dpi.jpg
       template-partials:
         - before-title.tex
-        # - toc.tex
       format-resources:
         - beamerthemeUM.sty
 
