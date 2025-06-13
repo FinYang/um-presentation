@@ -136,3 +136,28 @@
 
 
 \beamertemplatenavigationsymbolsempty
+
+% Modify reference size
+\newcommand{\oldbibitem}[2][]{}
+\let\oldbibitem\bibitem
+\renewcommand{\bibitem}[2][]{\oldbibitem[#1]{#2}\scriptsize}
+
+% Original from Pandoc's templates
+% GPL-3 license
+% https://github.com/jgm/pandoc/blob/734f86061893e81a14ef94432555f4edd24b2b8f/data/templates/default.latex#L386-L398
+% From Quarto beamer template
+% https://github.com/quarto-dev/quarto-cli/blob/487fd0e92ada5bf1673585643911b411db952f8a/src/resources/formats/beamer/pandoc/citations.tex#L20-L32
+% Modified to remove space between entries
+\renewenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{-12pt} % MODIFIED 0 -> -12
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
