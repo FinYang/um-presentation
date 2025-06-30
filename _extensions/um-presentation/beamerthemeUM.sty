@@ -148,6 +148,10 @@
 % From Quarto beamer template
 % https://github.com/quarto-dev/quarto-cli/blob/487fd0e92ada5bf1673585643911b411db952f8a/src/resources/formats/beamer/pandoc/citations.tex#L20-L32
 % Modified to remove space between entries
+\makeatletter
+\@ifundefined{CSLReferences}
+  {}% Do nothing if undefined
+  {
 \renewenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
  {\begin{list}{}{%
   \setlength{\itemindent}{0pt}
@@ -161,3 +165,5 @@
   % set entry spacing
   \setlength{\itemsep}{#2\baselineskip}}}
  {\end{list}}
+}%
+\makeatother
