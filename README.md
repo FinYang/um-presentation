@@ -23,6 +23,5 @@ This will install the extension and create an example qmd file that you can use 
 
 
 
-- No toc support. 
 - Removed a few figure placement methods
 - No logo yet

@@ -6,6 +6,8 @@ contributes:
   formats:
     beamer:
       toc: false
+      toc-depth: 1
+      toc-title: Outline
       aspectratio: 43
       fontsize: 14pt
       section-titles: false
@@ -20,6 +22,7 @@ contributes:
       # titlelogo: logo-72dpi.jpg
       template-partials:
         - before-title.tex
+        - toc.tex
       format-resources:
         - beamerthemeUM.sty
 

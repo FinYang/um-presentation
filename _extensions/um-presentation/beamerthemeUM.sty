@@ -148,7 +148,6 @@
 % From Quarto beamer template
 % https://github.com/quarto-dev/quarto-cli/blob/487fd0e92ada5bf1673585643911b411db952f8a/src/resources/formats/beamer/pandoc/citations.tex#L20-L32
 % Modified to remove space between entries
-\makeatletter
 \@ifundefined{CSLReferences}
   {}% Do nothing if undefined
   {
@@ -166,4 +165,10 @@
   \setlength{\itemsep}{#2\baselineskip}}}
  {\end{list}}
 }%
-\makeatother
+
+% Tighter table of contents
+\usepackage{etoolbox}
+\pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{-20\p@}}}{}{}
+\setbeamertemplate{section in toc}[square]
+\setbeamerfont{section number projected}{size=\large}
+\setbeamertemplate{section in toc shaded}[default][50]

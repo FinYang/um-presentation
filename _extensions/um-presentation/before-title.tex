@@ -1,5 +1,14 @@
 \usetheme{UM}
 
+$if(toc)$
+% Outline at start of each section
+\AtBeginSection[]{
+  \begin{frame}{Outline}\vspace*{0.7cm}
+    \tableofcontents[currentsection,hideallsubsections]
+  \end{frame}
+}
+$endif$
+
 % title page
 \setbeamerfont{title}{series=\bfseries,parent=structure,size=\fontsize{$if(titlefontsize)$$titlefontsize$$else$22$endif$}{28}}
 \setbeamertemplate{title page}
