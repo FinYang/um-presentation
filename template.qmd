@@ -1,12 +1,43 @@
 ---
-title: Untitled
+title: A long title showing the size of the title textblock
 author: Firstname Lastname
 date: last-modified
+toc: true
 format:
   um-presentation-beamer: default
 ---
 
+# Introduction
 
-# test
+## Introduction
 
-tets
+This is a Quarto presentation template with UM elements
+
+# Options
+
+## Aspect ratio
+
+To use the wider aspect ratio of 16:9 (default), set
+``` yaml
+format:
+  um-presentation-beamer:
+    aspectratio: 169
+    titlegraphic: bg-wide.jpg
+```
+
+To use the aspect ratio of 4:3, set
+``` yaml
+format:
+  um-presentation-beamer:
+    aspectratio: 43
+    titlegraphic: bg.jpg
+```
+
+
+## Other options
+
+- `toc: false`
+- `titlefontsize: 20pt`
+- `fontsize: 14pt`
+- `date-format: "D MMMM YYYY"`
+- `toc-title: Outline`
