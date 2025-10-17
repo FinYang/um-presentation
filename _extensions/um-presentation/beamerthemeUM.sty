@@ -1,5 +1,5 @@
 % Modified from https://github.com/quarto-monash/presentation
-% Yangzhuoran Yang 13 Jun 2025 
+% Yangzhuoran Yang 13 Jun 2025
 
 \RequirePackage{beamerthememetropolis}
 % \beamer@centeredfalse
@@ -11,21 +11,23 @@
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
 \setlength{\TPVertModule}{1cm}
-\def\placefig#1#2#3#4{\begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}\end{textblock}}
+\def\placefig#1#2#3#4{
+  \begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}
+\end{textblock}}
 
 % Fonts
 \ifPDFTeX
-  \usepackage[scaled=0.85]{sourcecodepro}
-  \usepackage[sfdefault,lf]{FiraSans}
-  \usepackage{etoolbox}
-  \patchcmd{\@verbatim}
-    {\verbatim@font}
-    {\verbatim@font\fontsize{10}{10}\tt}
-    {}{}
+\usepackage[scaled=0.85]{sourcecodepro}
+\usepackage[sfdefault,lf]{FiraSans}
+\usepackage{etoolbox}
+\patchcmd{\@verbatim}
+{\verbatim@font}
+{\verbatim@font\fontsize{10}{10}\tt}
+{}{}
 \else % if luatex or xetex
-  \usepackage[fira]{fontsetup}
-  \setmonofont[Scale=0.85]{SourceCodePro-Regular.otf}
-  \def\verbatim@font{\fontsize{10}{10}\tt}%
+\usepackage[fira]{fontsetup}
+\setmonofont[Scale=0.85]{SourceCodePro-Regular.otf}
+\def\verbatim@font{\fontsize{10}{10}\tt}%
 \fi
 \usepackage{mathrsfs}
 
@@ -99,13 +101,13 @@
 % larger squares for enumeration
 \defbeamertemplate{enumerate item}{mysquare}
 { \raisebox{-0.ex}{\hbox{%
-    \usebeamerfont*{item projected}%
-    \usebeamercolor{enumerate item}%
-    \vrule width4ex height2.7ex depth.7ex%
-    \hskip-4ex%
-    \hbox to4ex{%
-      \hfil%
-      \color{white}\raisebox{.2ex}{\insertenumlabel}%
+      \usebeamerfont*{item projected}%
+      \usebeamercolor{enumerate item}%
+      \vrule width4ex height2.7ex depth.7ex%
+      \hskip-4ex%
+      \hbox to4ex{%
+        \hfil%
+        \color{white}\raisebox{.2ex}{\insertenumlabel}%
       \hfil}%
   }}%
 }
@@ -117,17 +119,19 @@
 
 % Triangle and stars for nested itemize lists
 \usesubitemizeitemtemplate{%
-    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
+  \tiny\raise1.5pt\hbox{\color{beamerstructure}$\blacktriangleright$}%
 }
 \usesubsubitemizeitemtemplate{%
-    \tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
+  \tiny\raise1.5pt\hbox{\color{beamerstructure}$\bigstar$}%
 }
 
 
 % Redefine shaded environment if it exists (for R plots)
 \ifcsname Shaded\endcsname
-  \definecolor{shadecolor}{RGB}{225,225,225}
-  \renewenvironment{Shaded}{\color{black}\fontsize{10}{10}\sf\begin{snugshade}\color{black}}{\end{snugshade}}
+\definecolor{shadecolor}{RGB}{225,225,225}
+\renewenvironment{Shaded}{\color{black}\fontsize{10}{10}\sf
+\begin{snugshade}\color{black}}{
+\end{snugshade}}
 \fi
 
 % Make page number grey in a box
@@ -149,21 +153,23 @@
 % https://github.com/quarto-dev/quarto-cli/blob/487fd0e92ada5bf1673585643911b411db952f8a/src/resources/formats/beamer/pandoc/citations.tex#L20-L32
 % Modified to remove space between entries
 \@ifundefined{CSLReferences}
-  {}% Do nothing if undefined
+{}% Do nothing if undefined
+{
+  \renewenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
   {
-\renewenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{-12pt} % MODIFIED 0 -> -12
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
+    \begin{list}{}{%
+        \setlength{\itemindent}{0pt}
+        \setlength{\leftmargin}{0pt}
+        \setlength{\parsep}{-12pt} % MODIFIED 0 -> -12
+        % turn on hanging indent if param 1 is 1
+        \ifodd #1
+        \setlength{\leftmargin}{\cslhangindent}
+        \setlength{\itemindent}{-1\cslhangindent}
+        \fi
+        % set entry spacing
+    \setlength{\itemsep}{#2\baselineskip}}}
+    {
+  \end{list}}
 }%
 
 % Tighter table of contents
