@@ -8,7 +8,7 @@ contributes:
       toc: false
       toc-depth: 1
       toc-title: Outline
-      aspectratio: 43
+      aspectratio: 169
       fontsize: 14pt
       section-titles: false
       pdf-engine: pdflatex
@@ -18,7 +18,7 @@ contributes:
       slide-number: true
       show-slide-number: all
       titlecolor: white
-      titlegraphic: bg.jpg
+      titlegraphic: bg-wide.jpg
       # titlelogo: logo-72dpi.jpg
       template-partials:
         - before-title.tex
