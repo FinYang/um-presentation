@@ -7,6 +7,34 @@ format:
   um-presentation-beamer: default
 ---
 
+```{r}
+#| label: setup
+#| echo: false
+
+library(tidyverse)
+
+theme_set(theme(
+  plot.background = element_blank(),
+  legend.background = element_blank(),
+  text = element_text(size = 21)
+))
+
+cbf_palette_grey <- c(
+  "#D55E00",
+  "#0072B2",
+  "#009E73",
+  "#CC79A7",
+  "#E69F00",
+  "#56B4E9",
+  "#F0E442",
+  "#999999"
+)
+
+options(ggplot2.discrete.fill = cbf_palette_grey)
+options(ggplot2.discrete.colour = cbf_palette_grey)
+
+```
+
 # Introduction
 
 ## Introduction
